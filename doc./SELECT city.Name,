@@ -1,0 +1,9 @@
+SELECT city.Name,
+       country.Name,
+       city.District,
+       city.Population
+FROM city
+JOIN country
+ON city.CountryCode = country.Code
+WHERE country.Continent='Europe'
+ORDER BY city.Population DESC;
